@@ -9,24 +9,24 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 Raw Data"] --> B{"🔎 Source Type?"}
-    B -->|Email| C["📧 Email Parser"]
-    B -->|Chat| D["💬 Chat Parser"]
-    B -->|Log| E["📋 Log Parser"]
-    C & D & E --> F["🔄 Unified Schema"]
-    F --> G["🔒 PII Pre-scan<br>(Presidio)"]
-    G --> H["✅ IncidentPayload"]
-    H --> I["📤 Service Bus Queue"]
+ A["Raw Data"] --> B{"Source Type?"}
+ B -->|Email| C["Email Parser"]
+ B -->|Chat| D["Chat Parser"]
+ B -->|Log| E["Log Parser"]
+ C & D & E --> F["Unified Schema"]
+ F --> G["PII Pre-scan<br>(Presidio)"]
+ G --> H["IncidentPayload"]
+ H --> I["Service Bus Queue"]
 
-    style A fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style C fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style D fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style E fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style F fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
-    style G fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style H fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style I fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style A fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style C fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style D fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style E fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style F fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style G fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style H fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style I fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
 ```
 
 ---

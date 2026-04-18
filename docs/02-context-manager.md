@@ -9,22 +9,22 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 IncidentPayload<br>(from Service Bus)"] --> B["🔄 Create/Resume Session"]
-    B --> C{"❓ Existing?"}
-    C -->|New| D["🆕 Init in Redis"]
-    C -->|Exists| E["📂 Load from Redis"]
-    D & E --> F["📎 Enrich Metadata"]
-    F --> G["⏭️ set_stage: context_ready"]
-    G --> H["➡️ Forward to Tool Router"]
+ A["IncidentPayload<br>(from Service Bus)"] --> B["Create/Resume Session"]
+ B --> C{"Existing?"}
+ C -->|New| D["Init in Redis"]
+ C -->|Exists| E["Load from Redis"]
+ D & E --> F["Enrich Metadata"]
+ F --> G["set_stage: context_ready"]
+ G --> H["Forward to Tool Router"]
 
-    style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style B fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style C fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style D fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style E fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style F fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style G fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
-    style H fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style B fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style C fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style D fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style E fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style F fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style G fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style H fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
 ```
 
 ---
