@@ -9,20 +9,20 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 SessionContext"] --> B{"🔎 current_stage?"}
-    B -->|context_ready| C["🤖 Summarizer Agent<br>(Foundry Hosted)"]
-    B -->|reclassify| D["🔄 Summarizer re-run"]
-    B -->|escalation| E["👤 Human Review Queue"]
-    B -->|pre_categorized| F["📊 Direct to Aggregation"]
-    C & D & E & F --> G["📊 App Insights Telemetry"]
+ A["SessionContext"] --> B{"current_stage?"}
+ B -->|context_ready| C["Summarizer Agent<br>(Foundry Hosted)"]
+ B -->|reclassify| D["Summarizer re-run"]
+ B -->|escalation| E["Human Review Queue"]
+ B -->|pre_categorized| F["Direct to Aggregation"]
+ C & D & E & F --> G["App Insights Telemetry"]
 
-    style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style C fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style D fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style E fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style F fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style G fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style C fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style D fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style E fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style F fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style G fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
 ```
 
 ---

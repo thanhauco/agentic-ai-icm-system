@@ -9,29 +9,29 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 SessionContext"] --> B["🔍 Query Vector Store<br>(Azure AI Search)"]
-    B --> C["💾 Query Memory<br>(Redis)"]
-    C --> D["📝 Build Prompt"]
-    D --> E["🤖 GPT-5.2<br>(Foundry Hosted Agent)"]
-    E --> F["📋 Parse JSON Response"]
-    F --> G{"✅ Valid?"}
-    G -->|Yes| H["💾 Write Memory"]
-    G -->|No| I["🔄 Retry (max 3)"]
-    I --> D
-    H --> J["🔍 Index Embeddings<br>(AI Search)"]
-    J --> K["📤 CategorizedResults"]
+ A["SessionContext"] --> B["Query Vector Store<br>(Azure AI Search)"]
+ B --> C["Query Memory<br>(Redis)"]
+ C --> D["Build Prompt"]
+ D --> E["GPT-5.2<br>(Foundry Hosted Agent)"]
+ E --> F["Parse JSON Response"]
+ F --> G{"Valid?"}
+ G -->|Yes| H["Write Memory"]
+ G -->|No| I["Retry (max 3)"]
+ I --> D
+ H --> J["Index Embeddings<br>(AI Search)"]
+ J --> K["CategorizedResults"]
 
-    style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style B fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style C fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style D fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style E fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style F fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style G fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style H fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style I fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style J fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style K fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style B fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style C fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style D fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style E fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style F fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style G fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style H fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style I fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style J fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style K fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
 ```
 
 ---
