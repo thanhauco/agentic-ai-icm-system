@@ -9,20 +9,20 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph LR
-    A["📄 Text"] --> B["🤖 text-embedding-3-large<br>(Azure OpenAI)"]
-    B --> C["🔢 1536-dim vector"]
-    C --> D["🗄️ Azure AI Search<br>(Vector Index)"]
-    D --> E["🔍 Hybrid: Vector + BM25"]
-    E --> F["🎯 Semantic Ranker"]
-    F --> G["📤 Top-K Results"]
+ A["Text"] --> B["text-embedding-3-large<br>(Azure OpenAI)"]
+ B --> C["1536-dim vector"]
+ C --> D["Azure AI Search<br>(Vector Index)"]
+ D --> E["Hybrid: Vector + BM25"]
+ E --> F["Semantic Ranker"]
+ F --> G["Top-K Results"]
 
-    style A fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style B fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style C fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style D fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style E fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style F fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
-    style G fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style A fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style B fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style C fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style D fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style E fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style F fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style G fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
 ```
 
 ---

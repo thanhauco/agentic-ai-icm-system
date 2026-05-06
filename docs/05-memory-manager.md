@@ -9,26 +9,26 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    subgraph ShortTerm["⚡ Short-Term — Azure Cache for Redis"]
-        ST1["Session state"]
-        ST2["Intermediate results"]
-        ST3["Conversation history"]
-        ST4["Checkpoints"]
-    end
-    subgraph LongTerm["💾 Long-Term — Azure Cosmos DB"]
-        LT1["Incident patterns"]
-        LT2["Categorization rules"]
-        LT3["Service knowledge"]
-        LT4["Mitigation playbooks"]
-    end
-    subgraph StageManagement["🔄 Stage Machine"]
-        SM1["Pipeline progress"]
-        SM2["Checkpoint snapshots"]
-        SM3["Rollback support"]
-    end
+ subgraph ShortTerm["Short-Term — Azure Cache for Redis"]
+ ST1["Session state"]
+ ST2["Intermediate results"]
+ ST3["Conversation history"]
+ ST4["Checkpoints"]
+ end
+ subgraph LongTerm["Long-Term — Azure Cosmos DB"]
+ LT1["Incident patterns"]
+ LT2["Categorization rules"]
+ LT3["Service knowledge"]
+ LT4["Mitigation playbooks"]
+ end
+ subgraph StageManagement["Stage Machine"]
+ SM1["Pipeline progress"]
+ SM2["Checkpoint snapshots"]
+ SM3["Rollback support"]
+ end
 
-    ST4 --> SM2
-    SM3 --> ST1
+ ST4 --> SM2
+ SM3 --> ST1
 ```
 
 ---
