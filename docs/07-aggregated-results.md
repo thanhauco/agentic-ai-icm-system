@@ -9,18 +9,18 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 CategorizedResults<br>(from Summarizer)"] --> B["📂 Group by Category"]
-    B --> C["📊 Composite Re-rank"]
-    C --> D["🚫 Filter conf < 0.4"]
-    D --> E["✅ RankedResultSet"]
-    E --> F["➡️ Supervisor Agent<br>(MAF Workflow)"]
+ A["CategorizedResults<br>(from Summarizer)"] --> B["Group by Category"]
+ B --> C["Composite Re-rank"]
+ C --> D["Filter conf < 0.4"]
+ D --> E["RankedResultSet"]
+ E --> F["Supervisor Agent<br>(MAF Workflow)"]
 
-    style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style C fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style D fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style E fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style F fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style C fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style D fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style E fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style F fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
 ```
 
 ---

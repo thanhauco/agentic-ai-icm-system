@@ -9,22 +9,22 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 RankedResultSet"] --> B{"🔎 Schema Valid?"}
-    B -->|Invalid| C["🔄 Back to Summarizer"]
-    B -->|Valid| D["📋 MAF Workflow Dispatch"]
-    D --> E{"🔀 Concurrent Delegation"}
-    E --> F["🛡️ Noise Guard → ⚡ WF-9"]
-    E --> G["🛡️ Impact Guard → ⚡ WF-10"]
-    E --> H["🛡️ Mitig Guard → ⚡ WF-25"]
+ A["RankedResultSet"] --> B{"Schema Valid?"}
+ B -->|Invalid| C["Back to Summarizer"]
+ B -->|Valid| D["MAF Workflow Dispatch"]
+ D --> E{"Concurrent Delegation"}
+ E --> F["Noise Guard → WF-9"]
+ E --> G["Impact Guard → WF-10"]
+ E --> H["Mitig Guard → WF-25"]
 
-    style A fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
-    style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style C fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style D fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style E fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style F fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style G fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style H fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style A fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style C fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style D fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style E fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style F fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style G fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style H fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
 ```
 
 ---
