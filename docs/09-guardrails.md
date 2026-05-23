@@ -9,25 +9,25 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 From MAF Supervisor"] --> B{"🔎 Schema Valid?"}
-    B -->|Fail| C["❌ REJECT"]
-    B -->|Pass| D["🔒 Content Safety<br>(Azure AI Content Safety)"]
-    D -->|Fail| C
-    D -->|Pass| E["📏 Business Rules"]
-    E -->|Fail| C
-    E -->|Pass| F["🔐 PII Check<br>(Presidio Verify)"]
-    F -->|Unmasked PII| C
-    F -->|Clean| G["✅ APPROVED"]
-    C --> H["📊 App Insights<br>Log Rejection"]
+ A["From MAF Supervisor"] --> B{"Schema Valid?"}
+ B -->|Fail| C["REJECT"]
+ B -->|Pass| D["Content Safety<br>(Azure AI Content Safety)"]
+ D -->|Fail| C
+ D -->|Pass| E["Business Rules"]
+ E -->|Fail| C
+ E -->|Pass| F["PII Check<br>(Presidio Verify)"]
+ F -->|Unmasked PII| C
+ F -->|Clean| G["APPROVED"]
+ C --> H["App Insights<br>Log Rejection"]
 
-    style A fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
-    style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style C fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style D fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style E fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style F fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style G fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style H fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style A fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style C fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style D fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style E fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style F fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style G fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style H fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
 ```
 
 ---

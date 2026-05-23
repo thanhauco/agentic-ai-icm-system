@@ -9,26 +9,26 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 WF-9 Output<br>or WF-10 Output"] --> B["📊 Foundry Evaluator Agent"]
-    B --> C["🤖 GPT-5.2 Evaluation"]
-    C --> D{"🎯 Composite ≥ 0.7?"}
-    D -->|Yes| E["✅ APPROVED"]
-    D -->|0.4–0.7| F["🔄 REVISE<br>(feedback to agent)"]
-    D -->|< 0.4| G["❌ REJECT"]
-    E --> H["📤 Output Layer"]
-    F --> I["🔄 Re-run Source Agent"]
-    G --> J["🚨 Human Review Queue"]
+ A["WF-9 Output<br>or WF-10 Output"] --> B["Foundry Evaluator Agent"]
+ B --> C["GPT-5.2 Evaluation"]
+ C --> D{"Composite ≥ 0.7?"}
+ D -->|Yes| E["APPROVED"]
+ D -->|0.4–0.7| F["REVISE<br>(feedback to agent)"]
+ D -->|< 0.4| G["REJECT"]
+ E --> H["Output Layer"]
+ F --> I["Re-run Source Agent"]
+ G --> J["Human Review Queue"]
 
-    style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style B fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style C fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style D fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style E fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style F fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style G fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style H fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style I fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style J fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style B fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style C fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style D fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style E fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style F fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style G fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style H fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style I fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style J fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
 ```
 
 > **Note**: WF-25 Mitigation Agent **bypasses** the Evaluator — its outputs go directly to the Output Layer for urgency.
