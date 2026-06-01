@@ -9,39 +9,39 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    subgraph Governance ["🏛️ AI Governance"]
-        DC["📊 Data Classification"]
-        PII["🔒 PII Redaction<br>(Presidio)"]
-        MASK["🎭 Data Masking"]
-        KV["🔑 Azure Key Vault"]
-    end
-    subgraph ResponsibleAI ["🛡️ Responsible AI"]
-        PI["🚫 Prompt Injection<br>Defense"]
-        JB["🚫 Jailbreak<br>Defense"]
-        CS["🔍 Content Safety<br>(Azure AI)"]
-        BIAS["📊 Bias Detection"]
-    end
+ subgraph Governance ["AI Governance"]
+ DC["Data Classification"]
+ PII["PII Redaction<br>(Presidio)"]
+ MASK["Data Masking"]
+ KV["Azure Key Vault"]
+ end
+ subgraph ResponsibleAI ["Responsible AI"]
+ PI["Prompt Injection<br>Defense"]
+ JB["Jailbreak<br>Defense"]
+ CS["Content Safety<br>(Azure AI)"]
+ BIAS["Bias Detection"]
+ end
 
-    RawInput["📥 Pipeline Input"] --> DC
-    DC --> PII
-    PII --> MASK
-    MASK --> Pipeline["🤖 Agent Pipeline"]
-    Pipeline --> CS
-    CS --> PI
-    PI --> JB
-    JB --> Output["📤 Safe Output"]
+ RawInput["Pipeline Input"] --> DC
+ DC --> PII
+ PII --> MASK
+ MASK --> Pipeline["Agent Pipeline"]
+ Pipeline --> CS
+ CS --> PI
+ PI --> JB
+ JB --> Output["Safe Output"]
 
-    style RawInput fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style DC fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style PII fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style MASK fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style KV fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style PI fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
-    style JB fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
-    style CS fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
-    style BIAS fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style Pipeline fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
-    style Output fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style RawInput fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style DC fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style PII fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style MASK fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style KV fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style PI fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
+ style JB fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
+ style CS fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style BIAS fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style Pipeline fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style Output fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
 ```
 
 ---

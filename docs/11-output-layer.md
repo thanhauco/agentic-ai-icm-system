@@ -9,26 +9,26 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    A["📥 Evaluated Outputs"] --> B["📐 Format Engine"]
-    B --> C["📄 Noise: Filtered Timeline"]
-    B --> D["📄 Impact: Factual Report"]
-    B --> E["📄 Mitigation: Action Plan"]
-    C & D & E --> F{"📡 Delivery Router"}
-    F --> G["🌐 REST API<br>(Azure Functions)"]
-    F --> H["🖥️ ICM Portal<br>(Cosmos DB read)"]
-    F --> I["📧 Email<br>(Azure Comm Services)"]
-    F --> J["💬 Teams<br>(Adaptive Cards)"]
+ A["Evaluated Outputs"] --> B["Format Engine"]
+ B --> C["Noise: Filtered Timeline"]
+ B --> D["Impact: Factual Report"]
+ B --> E["Mitigation: Action Plan"]
+ C & D & E --> F{"Delivery Router"}
+ F --> G["REST API<br>(Azure Functions)"]
+ F --> H["ICM Portal<br>(Cosmos DB read)"]
+ F --> I["Email<br>(Azure Comm Services)"]
+ F --> J["Teams<br>(Adaptive Cards)"]
 
-    style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style C fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style D fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style E fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style F fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style G fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
-    style H fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style I fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
-    style J fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style C fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style D fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style E fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style F fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style G fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style H fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style I fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
+ style J fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
 ```
 
 ---
