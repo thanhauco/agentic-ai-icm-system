@@ -9,53 +9,53 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph TD
-    subgraph Sources ["📡 Telemetry Sources"]
-        Agents["🤖 Foundry Agents"]
-        Modules["⚙️ Pipeline Modules"]
-        Infra["🏗️ Azure Infra"]
-    end
-    subgraph Collection ["📥 Collection Layer"]
-        OTel["🔭 OpenTelemetry SDK"]
-        AppIns["📊 Application Insights"]
-    end
-    subgraph Pillars ["🏛️ Four Pillars"]
-        EH["⚠️ Error Handling<br>Circuit Breaker"]
-        RH["📜 Run History<br>Full Audit"]
-        HC["💚 Health Checks<br>Liveness/Readiness"]
-        CC["💰 Cost Control<br>Token Budgets"]
-    end
-    subgraph Actions ["🎬 Actions"]
-        Alerts["🚨 Azure Monitor Alerts"]
-        Dashboard["📊 Workbooks / Grafana"]
-        AutoScale["📈 Auto-scale Policies"]
-    end
+ subgraph Sources ["Telemetry Sources"]
+ Agents["Foundry Agents"]
+ Modules["Pipeline Modules"]
+ Infra["Azure Infra"]
+ end
+ subgraph Collection ["Collection Layer"]
+ OTel["OpenTelemetry SDK"]
+ AppIns["Application Insights"]
+ end
+ subgraph Pillars ["Four Pillars"]
+ EH["Error Handling<br>Circuit Breaker"]
+ RH["Run History<br>Full Audit"]
+ HC["Health Checks<br>Liveness/Readiness"]
+ CC["Cost Control<br>Token Budgets"]
+ end
+ subgraph Actions ["Actions"]
+ Alerts["Azure Monitor Alerts"]
+ Dashboard["Workbooks / Grafana"]
+ AutoScale["Auto-scale Policies"]
+ end
 
-    Agents --> OTel
-    Modules --> OTel
-    Infra --> AppIns
-    OTel --> AppIns
-    AppIns --> EH
-    AppIns --> RH
-    AppIns --> HC
-    AppIns --> CC
-    EH --> Alerts
-    HC --> Alerts
-    CC --> Alerts
-    RH --> Dashboard
-    HC --> AutoScale
+ Agents --> OTel
+ Modules --> OTel
+ Infra --> AppIns
+ OTel --> AppIns
+ AppIns --> EH
+ AppIns --> RH
+ AppIns --> HC
+ AppIns --> CC
+ EH --> Alerts
+ HC --> Alerts
+ CC --> Alerts
+ RH --> Dashboard
+ HC --> AutoScale
 
-    style Agents fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style Modules fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style Infra fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style OTel fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style AppIns fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
-    style EH fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
-    style RH fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
-    style HC fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style CC fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style Alerts fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
-    style Dashboard fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style AutoScale fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style Agents fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style Modules fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style Infra fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style OTel fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style AppIns fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style EH fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
+ style RH fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style HC fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style CC fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style Alerts fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style Dashboard fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style AutoScale fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
 ```
 
 ---

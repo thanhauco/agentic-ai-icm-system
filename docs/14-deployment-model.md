@@ -9,30 +9,30 @@
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {'lineColor': '#AAAAAA'}}}%%
 graph LR
-    A["💻 Git Push"] --> B["⚙️ GitHub Actions"]
-    B --> C["🧪 Unit Tests"]
-    C --> D["📦 Docker Build"]
-    D --> E["📤 ACR Push"]
-    E --> F["🔧 azd deploy"]
-    F --> G["🧪 Dev"]
-    G --> H["✅ Integration Tests"]
-    H --> I["🔬 Staging"]
-    I --> J{"🔒 Approval Gate"}
-    J -->|Approved| K["🚀 Prod"]
-    J -->|Rejected| L["🚫 Block"]
+ A["Git Push"] --> B["GitHub Actions"]
+ B --> C["Unit Tests"]
+ C --> D["Docker Build"]
+ D --> E["ACR Push"]
+ E --> F["azd deploy"]
+ F --> G["Dev"]
+ G --> H["Integration Tests"]
+ H --> I["Staging"]
+ I --> J{"Approval Gate"}
+ J -->|Approved| K["Prod"]
+ J -->|Rejected| L["Block"]
 
-    style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
-    style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style C fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style D fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
-    style E fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
-    style F fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
-    style G fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
-    style H fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
-    style I fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
-    style J fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
-    style K fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
-    style L fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
+ style A fill:#00E5FF,stroke:#00B8D4,stroke-width:3px,color:#000
+ style B fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style C fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style D fill:#7C4DFF,stroke:#651FFF,stroke-width:3px,color:#fff
+ style E fill:#FF6D00,stroke:#FF9100,stroke-width:3px,color:#000
+ style F fill:#40C4FF,stroke:#0091EA,stroke-width:3px,color:#000
+ style G fill:#00FF88,stroke:#00E676,stroke-width:3px,color:#000
+ style H fill:#FFEB3B,stroke:#F9A825,stroke-width:3px,color:#000
+ style I fill:#EA80FC,stroke:#D500F9,stroke-width:3px,color:#000
+ style J fill:#FFD600,stroke:#FFC107,stroke-width:3px,color:#000
+ style K fill:#B2FF59,stroke:#76FF03,stroke-width:3px,color:#000
+ style L fill:#FF1744,stroke:#F50057,stroke-width:3px,color:#fff
 ```
 
 ---
